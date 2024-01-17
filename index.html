@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarker</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4 d-flex flex-column justify-content-center align-items-center py-5">
+        <h1 class="text-center position-relative">Bookmarker</h1>
+        <hr>
+        <div class="bookBody w-100 p-4 d-flex flex-column justify-content-center align-items-center">
+            <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="w-100 d-flex flex-column justify-content-center">
+                <label for="siteName">
+                    <i class="fa-solid fa-book-bookmark pe-2"></i>Site Name
+                </label>
+                <input type="text" placeholder="Bookmark Name" class="form-control mt-2 " id="siteName" required>
+            </div>
+            <div class="w-100 d-flex flex-column justify-content-center mt-3">
+                <label for="siteUrl">
+                    <i class="fa-solid fa-link  pe-2"></i>Site URL
+                </label>
+                <input type="url" placeholder="Website URL" class="form-control mt-2 " id="siteUrl" required>
+            </div>
+            <button class=" btn-submit mt-3" id="submitbtn" onclick="addWebSite()" disabled>Submit</button>
+
+        </div>
+        <div class="w-100 d-flex flex-column justify-content-center mt-3 ">
+            <label for="siteUrl">
+                <i class="fa-solid fa-search  pe-2"></i>Search
+            </label>
+            <input onkeyup="search(this.value)" type="url" placeholder="Search WebSite" class="form-control mt-2 "
+                required>
+        </div>
+        <table class="table mt-4 text-center bg-">
+            <thead>
+                <tr>
+
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
